@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Catalogue</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/flowershop.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+    <header>
+
+        <!--Navbar-->
+
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <!-- Add a small icon as my navbar brand -->
+
+            <a class="navbar-brand" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="currentColor" class="bi bi-flower1" viewBox="0 0 16 16">
+                    <path
+                        d="M6.174 1.184a2 2 0 0 1 3.652 0A2 2 0 0 1 12.99 3.01a2 2 0 0 1 1.826 3.164 2 2 0 0 1 0 3.652 2 2 0 0 1-1.826 3.164 2 2 0 0 1-3.164 1.826 2 2 0 0 1-3.652 0A2 2 0 0 1 3.01 12.99a2 2 0 0 1-1.826-3.164 2 2 0 0 1 0-3.652A2 2 0 0 1 3.01 3.01a2 2 0 0 1 3.164-1.826zM8 1a1 1 0 0 0-.998 1.03l.01.091c.012.077.029.176.054.296.049.241.122.542.213.887.182.688.428 1.513.676 2.314L8 5.762l.045-.144c.248-.8.494-1.626.676-2.314.091-.345.164-.646.213-.887a4.997 4.997 0 0 0 .064-.386L9 2a1 1 0 0 0-1-1zM2 9l.03-.002.091-.01a4.99 4.99 0 0 0 .296-.054c.241-.049.542-.122.887-.213a60.59 60.59 0 0 0 2.314-.676L5.762 8l-.144-.045a60.59 60.59 0 0 0-2.314-.676 16.705 16.705 0 0 0-.887-.213 4.99 4.99 0 0 0-.386-.064L2 7a1 1 0 1 0 0 2zm7 5-.002-.03a5.005 5.005 0 0 0-.064-.386 16.398 16.398 0 0 0-.213-.888 60.582 60.582 0 0 0-.676-2.314L8 10.238l-.045.144c-.248.8-.494 1.626-.676 2.314-.091.345-.164.646-.213.887a4.996 4.996 0 0 0-.064.386L7 14a1 1 0 1 0 2 0zm-5.696-2.134.025-.017a5.001 5.001 0 0 0 .303-.248c.184-.164.408-.377.661-.629A60.614 60.614 0 0 0 5.96 9.23l.103-.111-.147.033a60.88 60.88 0 0 0-2.343.572c-.344.093-.64.18-.874.258a5.063 5.063 0 0 0-.367.138l-.027.014a1 1 0 1 0 1 1.732zM4.5 14.062a1 1 0 0 0 1.366-.366l.014-.027c.01-.02.021-.048.036-.084a5.09 5.09 0 0 0 .102-.283c.078-.233.165-.53.258-.874a60.6 60.6 0 0 0 .572-2.343l.033-.147-.11.102a60.848 60.848 0 0 0-1.743 1.667 17.07 17.07 0 0 0-.629.66 5.06 5.06 0 0 0-.248.304l-.017.025a1 1 0 0 0 .366 1.366zm9.196-8.196a1 1 0 0 0-1-1.732l-.025.017a4.951 4.951 0 0 0-.303.248 16.69 16.69 0 0 0-.661.629A60.72 60.72 0 0 0 10.04 6.77l-.102.111.147-.033a60.6 60.6 0 0 0 2.342-.572c.345-.093.642-.18.875-.258a4.993 4.993 0 0 0 .367-.138.53.53 0 0 0 .027-.014zM11.5 1.938a1 1 0 0 0-1.366.366l-.014.027c-.01.02-.021.048-.036.084a5.09 5.09 0 0 0-.102.283c-.078.233-.165.53-.258.875a60.62 60.62 0 0 0-.572 2.342l-.033.147.11-.102a60.848 60.848 0 0 0 1.743-1.667c.252-.253.465-.477.629-.66a5.001 5.001 0 0 0 .248-.304l.017-.025a1 1 0 0 0-.366-1.366zM14 9a1 1 0 0 0 0-2l-.03.002a4.996 4.996 0 0 0-.386.064c-.242.049-.543.122-.888.213-.688.182-1.513.428-2.314.676L10.238 8l.144.045c.8.248 1.626.494 2.314.676.345.091.646.164.887.213a4.996 4.996 0 0 0 .386.064L14 9zM1.938 4.5a1 1 0 0 0 .393 1.38l.084.035c.072.03.166.064.283.103.233.078.53.165.874.258a60.88 60.88 0 0 0 2.343.572l.147.033-.103-.111a60.584 60.584 0 0 0-1.666-1.742 16.705 16.705 0 0 0-.66-.629 4.996 4.996 0 0 0-.304-.248l-.025-.017a1 1 0 0 0-1.366.366zm2.196-1.196.017.025a4.996 4.996 0 0 0 .248.303c.164.184.377.408.629.661A60.597 60.597 0 0 0 6.77 5.96l.111.102-.033-.147a60.602 60.602 0 0 0-.572-2.342c-.093-.345-.18-.642-.258-.875a5.006 5.006 0 0 0-.138-.367l-.014-.027a1 1 0 1 0-1.732 1zm9.928 8.196a1 1 0 0 0-.366-1.366l-.027-.014a5 5 0 0 0-.367-.138c-.233-.078-.53-.165-.875-.258a60.619 60.619 0 0 0-2.342-.572l-.147-.033.102.111a60.73 60.73 0 0 0 1.667 1.742c.253.252.477.465.66.629a4.946 4.946 0 0 0 .304.248l.025.017a1 1 0 0 0 1.366-.366zm-3.928 2.196a1 1 0 0 0 1.732-1l-.017-.025a5.065 5.065 0 0 0-.248-.303 16.705 16.705 0 0 0-.629-.661A60.462 60.462 0 0 0 9.23 10.04l-.111-.102.033.147a60.6 60.6 0 0 0 .572 2.342c.093.345.18.642.258.875a4.985 4.985 0 0 0 .138.367.575.575 0 0 0 .014.027zM8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                </svg></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">Cart</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!--Navbar-->
+
+    </header>
+
+    <main>
+
+        <!-- This is my product page. Contains at least 5 images, 2 blocks, 1 quote/testimonial -->
+
+        <div class="py-5">
+
+            <!-- Added padding for images-->
+
+            <div class="container px-4 px-lg-5 mt-5">
+
+                <!-- I have made 4 cards displaying products per row. This is Card 1-->
+
+                <div class="row">
+                    <div class="col mb-5">
+
+                        <!-- Setting a uniform card height -->
+
+                        <div class="card h-100">
+
+                            <!-- Added a thumbnail image to my card -->
+
+                            <img class="card-img-top img-thumbnail" src="images/sergey-shmidt-koy6FlCCy5s-unsplash.jpg"
+                                alt="Yellow tulips" />
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5>Bright yellow tulips</h5>
+                                </div>
+                                <div class="text-center price">R2.56</div>
+                            </div>
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+
+                                <!-- I have added a modal to appear when the " info " button is clicked. Added animations with jQuery to how the modal appears. -->
+
+                                <div><button type="button" class="btn btn-primary text-right" data-toggle="modal"
+                                        data-target="#yellowtulips" onclick="showModal('#yellowtulips')">
+                                        Info
+                                    </button> 
+
+                                    <!-- The add to cart button calls the addflowers function which add the item to the cart directly from the catalogue page -->
+
+                                    <button type="button" name="Yellow Tulips" value="2.56"
+                                        onclick="addFlower(event)" class="btn btn-success">
+                                        Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Modal for Card 1-->
+
+                        <!-- The modal contains some info, price and the "Add to cart" and "close" buttons -->
+
+                        <div class="modal" id="yellowtulips">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Yellow Tulips</h4>
+                                    </div>
+
+                                    <!-- Block with text -->
+
+                                    <div class="modal-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit
+                                            purus vitae nisi aliquam tincidunt. Praesent gravida tortor ac nunc
+                                            scelerisque, ut ultrices neque auctor. In libero orci, viverra in lectus id,
+                                            sodales efficitur est. Nam laoreet fermentum aliquet. Quisque tempor, neque
+                                            a finibus tincidunt, felis neque posuere nisi, id. </p>
+                                        <div class="text-right price">R2.56</div>
+                                    </div>
+                                    <div class="modal-footer">
+
+                                        <!-- 2 buttons styled -->
+
+                                        <button type="button" name="Yellow Tulips" value="2.56"
+                                            onclick="addFlower(event)" class="btn btn-success">Add to cart</button>
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- End of Modal for Card 1 -->
+
+                        </div>
+
+                        <!-- End of Card 1-->
+
+                    </div>
+
+                    <!-- Card 2 -->
+
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <img class="card-img-top img-thumbnail" src="images/biel-morro-kcKiBcDTJt4-unsplash.jpg"
+                                alt="Red roses" />
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5>Red Roses</h5>
+                                </div>
+                                <div class="text-center price">R2.67</div>
+                            </div>
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div>
+                                    <button type="button" class="btn btn-primary text-right" data-toggle="modal"
+                                        data-target="#redroses" onclick="showModal('#redroses')">
+                                        Info
+                                    </button> <button type="button" name="Red roses" value="2.67"
+                                        onclick="addFlower(event)" class="btn btn-success">
+                                        Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Modal for Card 2-->
+
+                        <div class="modal" id="redroses">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+
+
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Red Roses</h4>
+
+                                    </div>
+
+
+                                    <div class="modal-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit
+                                            purus vitae nisi aliquam tincidunt. Praesent gravida tortor ac nunc
+                                            scelerisque, ut ultrices neque auctor. In libero orci, viverra in lectus id,
+                                            sodales efficitur est. Nam laoreet fermentum aliquet. Quisque tempor, neque
+                                            a finibus tincidunt, felis neque posuere nisi, id. </p>
+                                        <div class="text-right price">R2.67</div>
+                                    </div>
+
+
+                                    <div class="modal-footer">
+                                        <button type="button" name="Red roses" value="2.67" onclick="addFlower(event)"
+                                            class="btn btn-success">Add to cart</button>
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- End of Modal for Card 2-->
+
+                        </div>
+
+                        <!-- End of Card 2 -->
+
+                    </div>
+
+                    <!-- Card 3 -->
+
+                    <div class="col mb-5">
+                        <div class="card h-100">
+
+                            <img class="card-img-top img-thumbnail" src="images/gerome-bruneau-RPmWEtZLh7U-unsplash.jpg"
+                                alt="Sunflowers" />
+
+                            <div class="card-body p-4">
+                                <div class="text-center">
+
+                                    <h5>Sunflowers</h5>
+
+                                </div>
+                                <div class="text-center price">R2.78</div>
+                            </div>
+
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button type="button" class="btn btn-primary"
+                                        data-toggle="modal" data-target="#sunflowers"
+                                        onclick="showModal('#sunflowers')">
+                                        Info
+                                    </button> <button type="button" name="Sunflowers" value="2.78"
+                                        onclick="addFlower(event)" class="btn btn-success">
+                                        Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Modal for Card 3-->
+
+                        <div class="modal" id="sunflowers">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+
+
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Sunflowers</h4>
+
+                                    </div>
+
+
+                                    <div class="modal-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit
+                                            purus vitae nisi aliquam tincidunt. Praesent gravida tortor ac nunc
+                                            scelerisque, ut ultrices neque auctor. In libero orci, viverra in lectus id,
+                                            sodales efficitur est. Nam laoreet fermentum aliquet. Quisque tempor, neque
+                                            a finibus tincidunt, felis neque posuere nisi, id. </p>
+                                        <div class="text-right price">R2.78</div>
+                                    </div>
+
+
+                                    <div class="modal-footer">
+                                        <button type="button" name="Sunflowers" value="2.78" onclick="addFlower(event)"
+                                            class="btn btn-success">Add to cart</button>
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- End of Modal for Card 3-->
+
+                        </div>
+
+                        <!-- End of Card 3 -->
+
+                    </div>
+
+                    <!-- Card 4 -->
+
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <img class="card-img-top img-thumbnail"
+                                src="images/gaetano-cessati-CCy2UFLO1Mg-unsplash.jpg" alt="Blue hydrangeas" />
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5>Blue Hydrangeas</h5>
+                                </div>
+                                <div class="text-center price">R2.89</div>
+                            </div>
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button type="button" class="btn btn-primary"
+                                        data-toggle="modal" data-target="#bluehydrangeas"
+                                        onclick="showModal('#bluehydrangeas')">Info</button>
+                                    <button type="button" name="Blue Hydrangeas" value="2.89" onclick="addFlower(event)"
+                                        class="btn btn-success">
+                                        Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Modal for Card 4 -->
+
+                        <div class="modal" id="bluehydrangeas">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+
+
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Blue hydrangeas</h4>
+
+                                    </div>
+
+
+                                    <div class="modal-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit
+                                            purus vitae nisi aliquam tincidunt. Praesent gravida tortor ac nunc
+                                            scelerisque, ut ultrices neque auctor. In libero orci, viverra in lectus id,
+                                            sodales efficitur est. Nam laoreet fermentum aliquet. Quisque tempor, neque
+                                            a finibus tincidunt, felis neque posuere nisi, id. </p>
+                                        <div class="text-right price">R2.89</div>
+                                    </div>
+
+
+                                    <div class="modal-footer">
+                                        <button type="button" name="Blue Hydrangeas" value="2.89"
+                                            onclick="addFlower(event)" class="btn btn-success">Add to cart</button>
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Modal for Card 2-->
+
+                        </div>
+
+                        <!-- End of Card 2 -->
+
+                    </div>
+
+                    <!-- End of Row 1 -->
+
+                </div>
+
+                <div class="row">
+
+                    <!-- Card 5 -->
+
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <img class="card-img-top img-thumbnail" src="images/melissa-askew-B933FT2BO5k-unsplash.jpg"
+                                alt="Pink dahlias" />
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5>Pink Dahlias</h5>
+                                </div>
+                                <div class="text-center price">R2.91</div>
+                            </div>
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button type="button" class="btn btn-primary"
+                                        data-toggle="modal" data-target="#pinkdahlias"
+                                        onclick="showModal('#pinkdahlias')">
+                                        Info
+                                    </button> <button type="button" name="Pink dahlias" value="2.91"
+                                        onclick="addFlower(event)" class="btn btn-success">
+                                        Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Modal for Card 5 -->
+
+                        <div class="modal" id="pinkdahlias">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+
+
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Pink Dahlias</h4>
+
+                                    </div>
+
+
+                                    <div class="modal-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit
+                                            purus vitae nisi aliquam tincidunt. Praesent gravida tortor ac nunc
+                                            scelerisque, ut ultrices neque auctor. In libero orci, viverra in lectus id,
+                                            sodales efficitur est. Nam laoreet fermentum aliquet. Quisque tempor, neque
+                                            a finibus tincidunt, felis neque posuere nisi, id. </p>
+                                        <div class="text-right price">R2.91</div>
+                                    </div>
+
+
+                                    <div class="modal-footer">
+                                        <button type="button" name="Pink Dahlias" value="2.91"
+                                            onclick="addFlower(event)" class="btn btn-success">Add to cart</button>
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- End of Modal for Card 5 -->
+
+                        </div>
+
+                        <!-- End of Card 5 -->
+
+                    </div>
+
+                    <!-- Card 6 -->
+
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <img class="card-img-top img-thumbnail" src="images/dane-deaner-GKtWcCHEXYI-unsplash.jpg"
+                                alt="Pink and blue daisies" />
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5>Pink and Blue Daisies</h5>
+                                </div>
+                                <div class="text-center price">R2.23</div>
+                            </div>
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button type="button" class="btn btn-primary"
+                                        data-toggle="modal" data-target="#daisies" onclick="showModal('#daisies')">
+                                        Info
+                                    </button> <button type="button" name="Pink and blue daisies" value="2.23"
+                                        onclick="addFlower(event)" class="btn btn-success">
+                                        Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Modal for Card 6 -->
+
+                        <div class="modal" id="daisies">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Pink and Blue Daisies</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit
+                                            purus vitae nisi aliquam tincidunt. Praesent gravida tortor ac nunc
+                                            scelerisque, ut ultrices neque auctor. In libero orci, viverra in lectus id,
+                                            sodales efficitur est. Nam laoreet fermentum aliquet. Quisque tempor, neque
+                                            a finibus tincidunt, felis neque posuere nisi, id. </p>
+                                        <div class="text-right price">R2.23</div>
+                                    </div>
+
+
+                                    <div class="modal-footer">
+                                        <button type="button" name="Pink and Blue Daisies" value="2.23"
+                                            onclick="addFlower(event)" class="btn btn-success">Add to cart</button>
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- End of Modal for Card 6 -->
+
+                        </div>
+
+                        <!-- End of Card 6 -->
+
+                    </div>
+
+                    <!-- Card 7 -->
+
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <img class="card-img-top img-thumbnail" src="images/markus-spiske-A_6KbwLuVgk-unsplash.jpg"
+                                alt="Pale blue hydrangeas" />
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5>Pale Blue Hydrangeas</h5>
+                                </div>
+                                <div class="text-center price">R2.34</div>
+                            </div>
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button type="button" class="btn btn-primary"
+                                        data-toggle="modal" data-target="#hydrangeas"
+                                        onclick="showModal('#hydrangeas')">
+                                        Info
+                                    </button> <button type="button" name="Pale Blue Hydrangeas" value="2.34"
+                                        onclick="addFlower(event)" class="btn btn-success">
+                                        Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Modal for Card 7 -->
+
+                        <div class="modal" id="hydrangeas">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Pale Blue Hydrangeass</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit
+                                            purus vitae nisi aliquam tincidunt. Praesent gravida tortor ac nunc
+                                            scelerisque, ut ultrices neque auctor. In libero orci, viverra in lectus id,
+                                            sodales efficitur est. Nam laoreet fermentum aliquet. Quisque tempor, neque
+                                            a finibus tincidunt, felis neque posuere nisi, id. </p>
+                                        <div class="text-right price">R2.34</div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" name="Pale Blue Hydrangeass" value="2.34"
+                                            onclick="addFlower(event)" class="btn btn-success">Add to cart</button>
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- End of Modal for Card 7 -->
+
+                        </div>
+
+                        <!-- End of Card 7 -->
+
+                    </div>
+
+                    <!-- Card 8 -->
+
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <img class="card-img-top img-thumbnail" src="images/harry-grout-67I-shlEBLY-unsplash.jpg"
+                                alt="Alliums" />
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5>Purple Alliums</h5>
+                                </div>
+                                <div class="text-center price">R2.45</div>
+                            </div>
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button type="button" class="btn btn-primary"
+                                        data-toggle="modal" data-target="#alliums" onclick="showModal('#alliums')">
+                                        Info
+                                    </button>
+
+                                    <button type="button" name="Purple Alliums" value="2.45" onclick="addFlower(event)"
+                                        class="btn btn-success">
+                                        Cart
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Modal for Card 8 -->
+
+                        <div class="modal" id="alliums">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Purple Alliums</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit
+                                            purus vitae nisi aliquam tincidunt. Praesent gravida tortor ac nunc
+                                            scelerisque, ut ultrices neque auctor. In libero orci, viverra in lectus id,
+                                            sodales efficitur est. Nam laoreet fermentum aliquet. Quisque tempor, neque
+                                            a finibus tincidunt, felis neque posuere nisi, id. </p>
+                                        <div class="text-right price">R2.45</div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" name="Purple Alliums" value="2.45"
+                                            onclick="addFlower(event)" class="btn btn-success">Add to cart</button>
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- End of Modal for Card 8 -->
+
+                        </div>
+
+                    </div>
+
+                    <!-- End of Card 8 -->
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+
+    <footer style="background-color: #02850d;">
+
+        <!-- added quote/testimonial-->
+
+        <div class="container py-5 h-100">
+            <div class="card" style="float: left; width: 33%;">
+                <div class="card-header">Customer Review</div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="blockquote-footer"><cite title="Source Title">A. Daisy</cite>, Cape Town
+                        </div>
+                    </blockquote>
+                </div>
+            </div>
+
+            <div class="card" style="float: left; width:33%;">
+                <div class="card-header">Customer Review</div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <div class="blockquote-footer"><cite title="Source Title">B. Sunflower</cite>, Cape Town
+                        </div>
+                    </blockquote>
+                </div>
+            </div>
+
+            <div class="card" style="width: 33%;">
+                <div class="card-header">Customer Review</div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <div class="blockquote-footer"><cite title="Source Title">C. Tulip</cite>, Durban
+                        </div>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer -->
+    <script src="js/flowershop.js"></script>
+</body>
+
+</html>

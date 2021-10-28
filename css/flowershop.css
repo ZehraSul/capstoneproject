@@ -1,0 +1,147 @@
+ * {
+     box-sizing: border-box;
+ }
+
+ h1,
+ h2,
+ h3 {
+     text-align: center;
+ }
+
+ /* font colour */
+
+ h5 {
+     text-align: center;
+     color: black;
+ }
+
+ body {
+     font-family: Arial, Helvetica, sans-serif;
+     animation-name: backgroundColorPalette;
+     animation-duration: 15s;
+     animation-iteration-count: infinite;
+     animation-direction: alternate;
+ }
+
+ .jumbotron {
+     height: 100vh;
+     background-image: url('../images/jan-canty-KcQuXaHCSPE-unsplash.jpg');
+     background-size: cover;
+     background-repeat: no-repeat;
+ }
+
+ .jumbotron-background {
+     margin-top: 2%;
+     height: 100%;
+     background-color: rgb(255, 255, 255);
+     opacity: 0.6;
+ }
+
+ /* Centered, font colour */
+
+ .jumbotron-text {
+     opacity: 1;
+     padding: 15%;
+     color: rgb(0, 0, 0);
+     text-align: center;
+ }
+
+ .jumbotron-text p {
+     font-family: 'Ephesis', cursive;
+     font-size: 80px;
+ }
+
+ .navbar {
+     background-color: #02850d;
+ }
+
+ .container-mail input[type=text],
+ select,
+ textarea {
+     width: 100%;
+     padding: 12px;
+     border: 1px solid rgb(0, 0, 0);
+     border-radius: 4px;
+     box-sizing: border-box;
+     margin-top: 6px;
+     margin-bottom: 16px;
+     resize: vertical;
+ }
+
+ /* Centered */
+
+ .container {
+     margin-top: 10%;
+     text-align: center;
+ }
+
+ /* font colour */
+
+ .container-mail {
+     text-align: left;
+     color: white;
+     border-radius: 30px;
+     background-color: #02850d;
+     padding: 20px;
+ }
+
+ .card {
+     border: #22724a75 solid;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+ }
+
+ /* Added colour filter to images and animated images to expand when hovered over */
+
+ img:hover {
+     transform: scale(1.2);
+ }
+
+ /* Added customisation on hover */
+
+ ul.services {
+     list-style-type: circle;
+ }
+
+ ul.services li:hover {
+     list-style-type: disc;
+     font-weight: bold;
+ }
+
+ /* Font colour */
+
+
+ .text-right.price {
+     color: red;
+ }
+
+
+ .text-center.price {
+     color: rgb(255, 0, 0);
+ }
+
+/* Styling for cart page */
+
+ .discountcontainer {
+
+    margin-left: 10%;
+     text-align: center;
+ }
+
+ .Deliveryoptions {
+
+     margin-left: 10%;
+     text-align: center;
+ }
+
+ .orders {
+     margin-top: 1%;
+     margin-left: 10%;
+     text-align: center;
+ }
+
+ .totals {
+    margin-top: 1%;
+    margin-left: 10%;
+    text-align: center;
+}
+
