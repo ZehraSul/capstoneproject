@@ -8,14 +8,14 @@ This is a capstone project for level 1 of the HyperionDev Fullstack Web Develope
 * [Usage](https://github.com/ZehraSul/capstoneproject#usage)
 * [Credits](https://github.com/ZehraSul/capstoneproject#credits)
 
-###### Description
+#### Description
 It is an online flower shop. It allows the user to select flowers and add them to a cart. On the cart page it allows the user to see their order, change quantity of items and choose shipping.
 
-###### Installation
+#### Installation
 - Download all files
 - Open using browser
 
-###### Usage 
+#### Usage 
 - Navigate using nav bar  
 ![1](https://user-images.githubusercontent.com/93271014/139262025-da2e317e-8cde-4f44-a194-c783e948a160.jpg)
 - Shop using the catalogue page  
@@ -29,8 +29,7 @@ It is an online flower shop. It allows the user to select flowers and add them t
 - See items in cart, change quantity of items, see totals, confirm order  
 ![6](https://user-images.githubusercontent.com/93271014/139262454-cabd80a7-d277-4389-9faf-11d5ffacdf36.jpg)
 
-
-###### Credits
+#### Credits
 - Photo by [Gérôme Bruneau](https://unsplash.com/@geromebruneau?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 - Photo by [Biel Morro](https://unsplash.com/@bielmorro?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 - Photo by [Sergey Shmidt](https://unsplash.com/@monstercritic?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
