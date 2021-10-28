@@ -13,7 +13,7 @@ It is an online flower shop. It allows the user to select flowers and add them t
 
 #### Installation
 - Download all files
-- Open using browser
+- Open `index.html` file using browser
 
 #### Usage 
 - Navigate using nav bar  
