@@ -3,10 +3,10 @@
 This is a capstone project for level 1 of the HyperionDev Fullstack Web Developer Bootcamp. 
 
 ### Contents
-* Description
-* Installation
-* Usage
-* Credits
+* [Description](https://github.com/ZehraSul/capstoneproject#description)
+* [Installation](https://github.com/ZehraSul/capstoneproject#installation)
+* [Usage](https://github.com/ZehraSul/capstoneproject#usage)
+* [Credits](https://github.com/ZehraSul/capstoneproject#credits)
 
 ###### Description
 It is an online flower shop. It allows the user to select flowers and add them to a cart. On the cart page it allows the user to see their order, change quantity of items and choose shipping.
