@@ -19,7 +19,7 @@ It is an online flower shop. It allows the user to select flowers and add them t
 - Navigate using nav bar
 ![Image of nav bar](https://ibb.co/vmK7cgK)
 - Shop using the catalogue page
-![Image of nav bar](https://ibb.co/D9Dw8gG)
+![Image of catalogue](https://ibb.co/D9Dw8gG)
 
 ###### Credits
 - Photo by [Gérôme Bruneau](https://unsplash.com/@geromebruneau?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
