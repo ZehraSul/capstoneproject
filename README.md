@@ -18,6 +18,7 @@ It is an online flower shop. It allows the user to select flowers and add them t
 ###### Usage 
 Navigate using nav bar
 ! [Image of nav bar] (https://ibb.co/vmK7cgK)
+![GitHub Logo](/images/logo.png)
 
 ###### Credits
 
